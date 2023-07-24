@@ -1,10 +1,150 @@
 @use './variables' as var;
+@use './mixins' as mix;
 
 .card {
-	background: var.$white;
-	max-width: 32.7rem;
-	margin: 0 1rem 0 1rem;
-	padding: 2.4rem;
-	border-radius: 1.5rem;
 	position: relative;
+	background: var.$white;
+	max-width: 34.3rem;
+	margin: 0 1.6rem 0 1.6rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	display: grid;
+
+	@include mix.breakpoint(md) {
+		max-width: 60rem;
+		grid-template-columns: 1fr 1fr;
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	&__image {
+		padding: 0;
+		width: 100%;
+		aspect-ratio: 343 / 240;
+		background-image: url(../../images/image-product-mobile.jpg);
+		background-size: cover;
+		background-position: center;
+		margin-bottom: 2.2rem;
+
+		@include mix.breakpoint(md) {
+			height: 100%;
+			background-image: url(../../images/image-product-desktop.jpg);
+			background-size: cover;
+			background-position: center;
+			margin-bottom: 0rem;
+		}
+	}
+
+	&__info {
+		padding: 0 2.5rem 2.5rem 2.5rem;
+
+		@include mix.breakpoint(md) {
+			padding: 3.2rem;
+		}
+
+		&-type {
+			text-transform: uppercase;
+			letter-spacing: 0.4em;
+			font-size: 1.2rem;
+			margin-bottom: 1.4rem;
+
+			@include mix.breakpoint(md) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		&-title {
+			font-family: 'Fraunces', sans-serif;
+			color: var.$very-dark-blue;
+			font-size: 3.2rem;
+			font-weight: 700;
+			line-height: 1;
+			margin-bottom: 1.5rem;
+
+			@include mix.breakpoint(md) {
+				margin-bottom: 2.4rem;
+			}
+		}
+
+		&-desc {
+			font-size: 1.4rem;
+			line-height: 1.6;
+			margin-bottom: 2.2rem;
+
+			@include mix.breakpoint(md) {
+				margin-bottom: 2.8rem;
+			}
+		}
+
+		&-price {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1.6rem;
+
+			@include mix.breakpoint(md) {
+				margin-bottom: 2.6rem;
+			}
+
+			&-discount {
+				font-family: 'Fraunces', sans-serif;
+				color: var.$dark-cyan;
+				font-size: 3.2rem;
+				font-weight: 700;
+				margin-right: 2rem;
+			}
+
+			&-regular {
+				font-size: 1.4rem;
+				text-decoration: line-through;
+			}
+		}
+
+		.btn {
+			background: var.$dark-cyan;
+			color: var.$white;
+			width: 100%;
+			border: none;
+			padding: 1.7rem 2rem;
+			border-radius: 0.8rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.4rem;
+			line-height: 1;
+			cursor: pointer;
+
+			&:hover {
+				background: var.$darker-cyan;
+			}
+
+			img {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	/* .attribution {
+		position: absolute;
+		font-size: 0.8rem;
+		// bottom: 5rem;
+		// top: 0;
+		top: 55rem;
+		bottom: -2rem;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		text-align: center;
+		color: red;
+
+		a {
+			color: red;
+			// color: var.$dark-grayish-blue;
+			text-decoration: none;
+
+			&:hover {
+				color: var.$very-dark-blue;
+				font-weight: 400;
+			}
+		}
+	} */
 }
