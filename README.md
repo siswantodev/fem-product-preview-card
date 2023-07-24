@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Challenge Solution](https://www.frontendmentor.io/solutions/product-preview-card-component-using-grid-flexbox-sass-bem-EwMJq2RmGR)
+- Live Site URL: [Product Preview Card Component](https://fem-product-preview-card-good.netlify.app)
 
 ## My process
 
@@ -47,4 +47,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@siswantodev](https://www.frontendmentor.io/profile/siswantodev)
