@@ -2,15 +2,14 @@
 @use './mixins' as mix;
 
 .card {
-	position: relative;
 	background: var.$white;
 	max-width: 34.3rem;
 	margin: 0 1.6rem 0 1.6rem;
 	border-radius: 1rem;
 	overflow: hidden;
-	display: grid;
 
 	@include mix.breakpoint(md) {
+		display: grid;
 		max-width: 60rem;
 		grid-template-columns: 1fr 1fr;
 		border-radius: 1rem;
@@ -122,29 +121,32 @@
 			}
 		}
 	}
+}
 
-	/* .attribution {
-		position: absolute;
-		font-size: 0.8rem;
-		// bottom: 5rem;
-		// top: 0;
-		top: 55rem;
-		bottom: -2rem;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100%;
-		text-align: center;
-		color: red;
+.attribution {
+	display: block;
+	position: absolute;
+	font-size: 0.8rem;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color: var.$dark-grayish-blue;
+	display: none;
 
-		a {
-			color: red;
-			// color: var.$dark-grayish-blue;
-			text-decoration: none;
+	@include mix.breakpoint(md) {
+		display: block;
+		font-size: 1.2rem;
+		bottom: 3rem;
+	}
 
-			&:hover {
-				color: var.$very-dark-blue;
-				font-weight: 400;
-			}
+	a {
+		color: var.$dark-cyan;
+		font-weight: bold;
+		text-decoration: none;
+
+		&:hover {
+			color: var.$darker-cyan;
 		}
-	} */
+	}
 }
